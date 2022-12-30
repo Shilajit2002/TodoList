@@ -8,4 +8,4 @@
 
 <hr/>
 
-![responsive](https://user-images.githubusercontent.com/90305324/210094733-6123698e-961b-488f-a4eb-ec0a1be28037.png)
+<h4 align="center">![responsive](https://user-images.githubusercontent.com/90305324/210094733-6123698e-961b-488f-a4eb-ec0a1be28037.png)</h4>

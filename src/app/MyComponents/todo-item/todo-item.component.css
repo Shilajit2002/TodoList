@@ -1,0 +1,92 @@
+.strike {
+    text-decoration: line-through;
+}
+
+.my-3 h4 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, black, rgba(21, 0, 70, 0.164));
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.date p {
+    text-align: center;
+}
+
+p img {
+    width: 25px;
+}
+
+.desc {
+    background-color: rgba(21, 0, 70, 0.164);
+    padding: 5px;
+    font-size: 1.1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.down {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-check {
+    font-size: 1rem;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=checkbox] {
+    margin: 5px;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button img {
+    width: 25px;
+}
+
+button {
+    font-size: 1rem;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 420px) {
+    .date {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .down {
+        flex-direction: column;
+    }
+
+    button {
+        margin-top: 5px;
+    }
+}

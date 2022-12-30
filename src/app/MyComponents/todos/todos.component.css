@@ -1,0 +1,94 @@
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+app-add-todo {
+    background: linear-gradient(to bottom, #1a1c35, #191b34, rgba(7, 0, 17, 0.582));
+    width: 400px;
+    height: 480px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: rgba(1, 0, 20, 0.644) 0px 5px 15px;
+    overflow-y: auto;
+    overflow-x: visible;
+}
+
+.todo-list {
+    background: linear-gradient(to top, #1a1c35, #191b34, rgba(7, 0, 17, 0.582));
+    width: 450px;
+    height: 480px;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: visible;
+    box-shadow: rgba(1, 0, 20, 0.644) 0px 5px 15px;
+}
+
+.todo-list h4 {
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.todo-list .no {
+    background: linear-gradient(to top, #1a1c35, rgb(157, 13, 170), rgb(5, 65, 133));
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 400px;
+    padding: 15px;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.sno {
+    display: flex;
+    justify-content: space-around;
+    width: fit-content;
+}
+
+.sno p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+app-todo-item {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(60deg, #26283f, #1e1f2c);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 0px 10px;
+    color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+    .todo {
+        flex-direction: column;
+    }
+
+    app-add-todo {
+        margin-bottom: 30px;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .todo-list {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 314px) {
+    .sno{
+        flex-direction: column;
+    }
+
+    app-todo-item{
+        width: 100%;
+    }
+}

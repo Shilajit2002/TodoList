@@ -1,0 +1,41 @@
+.box{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #393d52,#5b5e76);
+}
+
+.container{
+    position: relative;
+    z-index: 1;
+    padding: 50px;
+}
+
+.circle1,.circle2{
+    width: 40%;
+    height: 40vw;
+    background: linear-gradient(to top,#cf551d,#e1b029);
+    box-shadow: rgba(255, 239, 196, 0.425) 0px 5px 15px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 0;
+}
+
+.circle1{
+    top: 0;
+    right: -117px;
+}
+
+.circle2{
+    bottom: -200px;
+    left: -70px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .box{
+        width: 100%;
+        height: fit-content;
+    }
+    .circle1,.circle2{
+        display: none;
+    }
+  }

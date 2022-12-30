@@ -1,0 +1,34 @@
+<!-- It is a for which access the todos array -->
+<!-- <ul *ngFor="let todo of todos">
+    <li>{{todo.sno}} - {{todo.title}} - {{todo.desc}}</li>
+</ul> -->
+
+<div class="todo">
+  <!-- App Add Todo Component -->
+  <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+
+  <!-- Todo List -->
+  <div class="todo-list">
+    <h4>Todo List</h4>
+    <!-- If there is nodo -->
+    <div *ngIf="this.todos.length === 0; else elseBlock" class="no">
+      <li>No Todos</li>
+      <li>Plz Add a new Todo</li>
+    </div>
+
+    <!-- Else show the todo list -->
+    <ng-template #elseBlock>
+      <div *ngFor="let todo of todos; index as i" class="sno">
+        <!-- Serial Number -->
+        <p>{{ i + 1 }}.</p>
+        <!-- App Todo Item Component -->
+        <app-todo-item
+          [todo]="todo"
+          [i]="i"
+          (todoDelete)="deleteTodo($event)"
+          (todoCheckbox)="toggleTodo($event)"
+        ></app-todo-item>
+      </div>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="my-3">
+  <!-- Todo Title -->
+  <!-- if its disacive then it will be strike through -->
+  <h4 [ngClass]="{ strike: !todo.active }">{{ todo.title }}</h4>
+  <div class="date">
+    <!-- Date for the particular todo -->
+    <p>
+      <img src="../../../assets/calender.png" alt="Date" /> {{ todo.day }} -
+      {{ todo.month + 1 }} - {{ todo.year }}
+    </p>
+    <!-- Time for the particular todo -->
+    <p>
+      <img src="../../../assets/clock.png" alt="Time" /> {{ todo.hour }} :
+      {{ todo.min }} : {{ todo.sec }} {{ todo.time }}
+    </p>
+  </div>
+
+  <!-- Todo Description -->
+  <!-- if its disacive then it will be strike through -->
+  <p [ngClass]="{ strike: !todo.active }" class="desc">
+    <img src="../../../assets/desc.png" alt="Description" /> {{ todo.desc }}
+  </p>
+
+  <!-- Buttons -->
+  <div class="down">
+    <!-- Done Button Checkbox -->
+    <div class="form-check bg-success">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="todo{{ i }}"
+        (click)="onCheckboxClick(todo)"
+        [checked]="!todo.active"
+      />
+      <label class="form-check-label" for="todo{{ i }}">Done</label>
+    </div>
+    <!-- Delete Button -->
+    <button class="btn btn-sm btn-danger" (click)="onClick(todo)">
+      <img src="../../../assets/del.png" alt="delete" />
+      Delete
+    </button>
+  </div>
+</div>
